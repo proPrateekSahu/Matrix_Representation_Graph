@@ -37,6 +37,10 @@ int main() {
 
 //disadvantege: it takes O(v^2) Space Complexity
 //Advantage:it can easily show whether two vertices are conected or not , also with weight with O(1) time complexity
+//the above advantage can be implemented as shown by adding these line of code to main code of bottom down code
+// if(arr[m][n]!=0){
+//     cout<<arr[i][j];}
+// }
 
 
 /*Undirected graph with weighted edges*/
