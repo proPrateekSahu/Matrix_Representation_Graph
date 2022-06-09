@@ -1,0 +1,72 @@
+#include<bits/stdc++.h>
+#define ll long long int
+using namespace std;
+const int N=1e3+10;//let say maximum 1 dimension size is 1e3 , therefore for 2d it will be 1e6
+
+int arr[N][N];
+int main() {
+    ll t;
+    cin>>t;
+    while(t--){
+        ll n,y;//n:maximum value of vertices or no. of vertices,,,,y:no. of edges
+        cin>>n>>y;
+        //1 based 2D array traversal and storage
+        for(int i=1;i<=y;i++){
+            ll a,b;//a and b are nodes which are connected
+            cin>>a>>b;
+            arr[a][b]=1;
+            arr[b][a]=1;//since here it is taken for undirected graph with unweighted edges
+        }
+       
+       
+       
+       //displaying adjacentacy matrix denoting 1 if vertices are connected else 0 for not connected
+        for(int i=1;i<=n+1;i++){
+        for(int j=1;j<=n+1;j++){
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    }
+    
+	// your code goes here
+	return 0;
+}
+
+
+
+//disadvantege: it takes O(v^2) Space Complexity
+//Advantage:it can easily show whether two vertices are conected or not , also with weight with O(1) time complexity
+
+
+/*Undirected graph with weighted edges*/
+// #include<bits/stdc++.h>
+// #define ll long long int
+// using namespace std;
+// const int N=1e3+10;
+
+// int arr[N][N];
+// int main() {
+//     ll t;
+//     cin>>t;
+//     while(t--){
+//         ll n,y;
+//         cin>>n>>y;
+//         for(int i=1;i<=y;i++){
+//             ll a,b,wt;
+//             cin>>a>>b>>wt;
+//             arr[a][b]=wt;
+//             arr[b][a]=wt;
+//         }
+        
+//         for(int i=1;i<=n+1;i++){
+//         for(int j=1;j<=n+1;j++){
+//             cout<<arr[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     }
+    
+// 	// your code goes here
+// 	return 0;
+// }
